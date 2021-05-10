@@ -17,7 +17,7 @@
 <p>6.	php artisan serve</p>
 
 
-##Usuario en proyecto
+<h4>Usuario en proyecto</h4>
 <p>Para poder entrar al proyecto se requiere de un usuario y para facilitar las cosas se creo uno que es el "master", por lo que es necesario entrar con este usuario: 
 cmirandavaltierra@gmail.com</p>
 <p>Y la contraseña es: 12345678</p>
