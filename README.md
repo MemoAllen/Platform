@@ -15,3 +15,12 @@
 <p>5.	php artisan migrate:fresh --seed</p>
 <p>Y para finalizar es momento de inicializar el servidor con el siguiente comando:</p>
 <p>6.	php artisan serve</p>
+
+
+##Usuario en proyecto
+<p>Para poder entrar al proyecto se requiere de un usuario y para facilitar las cosas se creo uno que es el "master", por lo que es necesario entrar con este usuario: 
+cmirandavaltierra@gmail.com</p>
+<p>Y la contraseña es: 12345678</p>
+<p>Una vez accediendo podra ver contenidos de todos los roles existentes</p>
+<p>Si en caso requiera crear un usuario nuevo tendra que registrarse y con el usuario "master", dar permisos al nuevo usuario creado</p>
+<p>Es necesario dirigirse a la sección de Administrador, en el apartado Usuarios y ahi buscar el usuario creado y otorgar los permisos segun requiera.</p>
