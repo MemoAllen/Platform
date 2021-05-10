@@ -68,6 +68,6 @@ class CourseController extends Controller
 
             Mail::to($course->teacher->email)->queue($mail);
 
-            return redirect()->route('admin.courses.index')->with('info', 'EL CURSO SE AH RECHAZADO CON ÉXITO');
+            return redirect()->route('admin.courses.index')->with('info', 'EL CURSO SE HA RECHAZADO CON ÉXITO');
         }
 }

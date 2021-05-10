@@ -13,7 +13,7 @@ class CourseStatus extends Component
 
     use AuthorizesRequests;
 
-    public $course, $current;
+    public $course, $current, $review ;
 
     public function mount(Course $course){
         $this->course = $course;
@@ -92,5 +92,8 @@ class CourseStatus extends Component
        $advance = ($i * 100)/($this->course->lessons->count());
        
        return round($advance, 2);
+    }
+    public function download(){
+        return response()->download(storage_path('app/public/'. $this->current->resource->url));
     }
 }
