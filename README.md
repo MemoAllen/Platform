@@ -3,14 +3,15 @@
 
 ## Instalar el proyecto
 
-Una vez descargado y descomprimido el proyecto, es necesario abrir el proyecto en Visual Studio Code y mediante la terminal que nos brinda dicha herramienta, es necesario ingresar los siguientes comandos:
-1.	composer install
-2.	cp .env.example .env
-3.	php artisan key:generate
-Es momento de crear la base de datos por lo que ingresaremos a nuestro localhost y en phpmyadmin crearemos la bd con el nombre de “plataforma” (sin comillas). Una vez creada la base de datos ingresaremos el próximo comando que sirve para crear las migraciones necesarias para su funcionamiento.
-Actualmente existe un pequeño error en las rutas de las imágenes que no las reconoce el comando al migrar por lo que es necesario ingresar el siguiente comando para poder ejecutar el proyecto
-4.	php artisan storage:link
-Y después el siguiente comando. En este momento se crearán las migraciones ya especificadas. 
-5.	php artisan migrate:fresh --seed
-Y para finalizar es momento de inicializar el servidor con el siguiente comando:
-6.	php artisan serve
+<p>Una vez descargado y descomprimido el proyecto, es necesario abrir el proyecto en Visual Studio Code y mediante la terminal que nos brinda dicha herramienta, es necesario ingresar los siguientes comandos:</p>
+
+<p>1.	composer install</p>
+<p>2.	cp .env.example .env</p>
+<p>3.	php artisan key:generate</p>
+<p>Es momento de crear la base de datos por lo que ingresaremos a nuestro localhost y en phpmyadmin crearemos la bd con el nombre de “plataforma” (sin comillas). Una vez creada la base de datos ingresaremos el próximo comando que sirve para crear las migraciones necesarias para su funcionamiento.</p>
+<p>Actualmente existe un pequeño error en las rutas de las imágenes que no las reconoce el comando al migrar por lo que es necesario ingresar el siguiente comando para poder ejecutar el proyecto</p>
+<p>4.	php artisan storage:link</p>
+<p>Y después el siguiente comando. En este momento se crearán las migraciones ya especificadas. </p>
+<p>5.	php artisan migrate:fresh --seed</p>
+<p>Y para finalizar es momento de inicializar el servidor con el siguiente comando:</p>
+<p>6.	php artisan serve</p>
