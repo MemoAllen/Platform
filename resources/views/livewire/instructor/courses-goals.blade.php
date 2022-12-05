@@ -1,6 +1,6 @@
 <section>
 
-    <h1 class="text-2xl font-bold"> Metas del curso</h1>
+    <h1 class="text-2xl font-bold"> Metas de la propiedad</h1>
     <hr class="mt-2 mb-6">
 
 

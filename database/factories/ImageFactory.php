@@ -20,9 +20,9 @@ class ImageFactory extends Factory
      * @return array
      */
     public function definition()
-    {
+    {   
         return [
-            'url' => 'courses/' .$this->faker->image('public/storage/courses', 640, 480, null, false)
+            'url' => 'courses/' . $this->faker->image('public/storage/courses', 640, 480, null, false)
         ];
     }
 }

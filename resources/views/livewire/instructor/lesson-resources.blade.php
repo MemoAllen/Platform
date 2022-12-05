@@ -5,7 +5,7 @@
 
         <header>
             <h1 x-on:click="open=!open" class="cursor-pointer">
-                Recursos de la lección
+                Recursos del vídeo
             </h1>
         </header>
         <div x-show="open">

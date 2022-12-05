@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Curso Onlyne EASY')
+@section('title', 'Admn Renta')
 
 @section('content_header')
-    <h1>Cursos pendientes de aprobación</h1>
+    <h1>Propiedades pendientes de aprobación</h1>
 @stop
 
 @section('content')

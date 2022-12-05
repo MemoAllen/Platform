@@ -1,6 +1,5 @@
 <section class="mt-4">
 
-
     <h1 class="font-bold text-3xl text-gray-800 mb-2">Valoración</h1>
 
 

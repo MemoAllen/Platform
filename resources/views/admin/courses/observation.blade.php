@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Curso Onlyne EASY')
+@section('title', 'Adm Renta')
 
 @section('content_header')
-    <h1>Observaciones del curso: {{$course->title}}</h1>
+    <h1>Observaciones de la propiedad: {{$course->title}}</h1>
 @stop
 
 @section('content')
@@ -11,7 +11,7 @@
         <div class="card-body">
             {!! Form::open(['route' => ['admin.courses.reject', $course]]) !!}
                 <div class="form-group">
-                        {!! Form::label('body', 'Observaciones del curso') !!}
+                        {!! Form::label('body', 'Observaciones de la propiedad') !!}
                         {!! Form::textarea('body', null) !!}
 
                         @error('body')
@@ -19,7 +19,7 @@
                         @enderror
                 </div>
 
-                {!! Form::submit('Rechazar curso', ['class' => 'btn btn-primary']) !!}
+                {!! Form::submit('Rechazar propiedad', ['class' => 'btn btn-primary']) !!}
             {!! Form::close() !!}
         </div>
     </div>

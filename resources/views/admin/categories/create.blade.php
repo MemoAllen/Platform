@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Curso Onlyne EASY')
+@section('title', 'Adm RENTA')
 
 @section('content_header')
     <h1>Crear nueva categoria</h1>

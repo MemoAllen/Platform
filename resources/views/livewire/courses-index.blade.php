@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
             <button class="focus:outline-none bg-white shadow h-12 px-4 rounded-lg text-gray-700 mr-4" wire:click="resetFilters">
                 <i class="fas fa-chalkboard-teacher text-xs mr-2"></i>
-                Todos los cursos
+                Todas las propiedades
             </button>
             <!-- Dropdown categoria-->
             <div class="relative mr-4" x-data="{ open : false}">
@@ -26,7 +26,7 @@
             <div class="relative" x-data="{ open : false}">
                 <button class="px-4 text-gray-700 block h-12 rounded-lg overflow-hidden focus:outline-none bg-white shadow" x-on:click="open = true">
                     <i class="fas fa-list-ol mr-2"></i>
-                    Niveles
+                    Nivel adquisitivo
                     <i class="fas fa-angle-down text-sm ml-2"></i>
                 </button>
                 <!-- Dropdown Body -->

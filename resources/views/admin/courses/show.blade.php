@@ -5,15 +5,15 @@
                 @if ($course->image)
                 <img class="h-60 w-full object-cover" src="{{Storage::url($course->image->url)}}" alt="">
                 @else
-                <img class="h-60 w-full object-cover" src="https://images.pexels.com/photos/5905749/pexels-photo-5905749.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <img class="h-60 w-full object-cover" src="https://i.pinimg.com/originals/e8/aa/a2/e8aaa218f1a475e95ca09ac8def2e83e.jpg" alt="">
                 @endif
             </figure>
 
             <div class="text-white">
                 <h1 class="text-4xl">{{$course->title}}</h1>
                 <h2 class="text-xl mb-3">{{$course->subtitle}}</h2>
-                <p class="mb-2"><i class="fas fa-chart-line"></i> Nivel: {{$course->level->name}}</p>
-                <p class="mb-2"><i class=""></i> Categoria: {{$course->category->name}}</p>
+                <p class="mb-2"><i class="fas fa-chart-line"></i> Nivel adquisitivo: {{$course->level->name}}</p>
+                <p class="mb-2"><i class="fas fa-bookmark"></i>Categoria: {{$course->category->name}}</p>
                 <p class="mb-2"><i class="fas fa-users"></i> Matriculados: {{$course->students_count}}</p>
                 <p class="mb-2"><i class="fas fa-star"></i> Calificación: {{$course->rating}}</p>
             </div>
@@ -39,13 +39,13 @@
 
             <section class="card mb-12">
                 <div class="card-body">
-                    <h1 class="font-bold text-2xl mb-2 text-green-700">Lo que aprenderás</h1>
+                    <h1 class="font-bold text-2xl mb-2 text-green-700">Ventajas de la vivienda</h1>
                 
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
                             @forelse ($course->goals as $goal)
                                 <li class="text-gray-600 text-base"><i class="fas fa-check text-gray-600 mr-2"></i>{{$goal->name}}</li>
                             @empty
-                                <li class="text-gray-600 text-base">Este curso no tiene asignado ninguna meta</li>
+                                <li class="text-gray-600 text-base">Esta propiedad no tiene asignado ninguna meta</li>
                             @endforelse
                     </ul>
 
@@ -53,8 +53,9 @@
             </section>
 
             {{-- TEMARIO --}}
+            <h1 class="font-bold text-3xl">Videos de la propiedad</h1>
             <section class="mb-12">
-                <h1 class="font-bold text-3xl mb-2">Temario</h1>
+                
                 @forelse ($course->sections as $section)
                     <article class="mb-4 shadow" 
                         @if ($loop->first)
@@ -79,7 +80,7 @@
                     @empty
                         <article class="card">
                             <div class="card.body">
-                                Este curso no tiene ninguna seccion asignada
+                                Esta propiedad no tiene ninguna seccion asignada
                             </div>
                         </article>
                     
@@ -94,13 +95,13 @@
                     @forelse ($course->requirements as $requirement)
                         <li class="text-gray-700 text-base">{{$requirement->name}}</li>
                         @empty
-                        <li class="text-gray-700 text-base">Este Curso no tiene ningun requerimiento</li>
+                        <li class="text-gray-700 text-base">Esta propiedad no tiene ningun requerimiento</li>
                     @endforelse
                 </ul>
             </section>
 
             <section>
-                <h1 class="font-bold text-3xl">Descripción</h1>
+                <h1 class="font-bold text-3xl">Descripción de la propiedad</h1>
                 <div class="text-gray-700 text-base">
                 {!!$course->description!!}
                 </div>
@@ -114,15 +115,15 @@
                     <div class="flex items-center">
                         <img class="h-12 w-12 object-cover rounded-full shadow-lg" src="{{$course->teacher->profile_photo_url}}" alt="{{$course->teacher->name}}">
                         <div class="ml-4">
-                            <h1 class="font-bold text-gray-500 text-lg">Prof: {{$course->teacher->name}}</h1>
+                            <h1 class="font-bold text-gray-500 text-lg">Arrendatario: {{$course->teacher->name}}</h1>
                             <a class="text-blue-400 text-sm font-bold" href="">{{'@' . Str::slug($course->teacher->name, '')}}</a>
                         </div>
                     </div>
                     <form action="{{route('admin.courses.approved', $course)}}" class="mt-4" method="POST">
                         @csrf
-                        <button type="submit" class="btn btn-primary w-full">APROBAR CURSO</button>
+                        <button type="submit" class="btn btn-primary w-full">APROBAR PROPIEDAD</button>
                     </form>
-                    <a href="{{route('admin.courses.observation', $course)}}" class="btn btn-danger w-full block text-center mt-4">Observar curso.</a>
+                    <a href="{{route('admin.courses.observation', $course)}}" class="btn btn-danger w-full block text-center mt-4">Verificar propiedad.</a>
                 </div>
             </section>
         </div>

@@ -15,14 +15,14 @@
 
             <div class="flex justify-between mt-4">
              {{--Marcar como culminado--}}
-            <div class="flex items-center cursor-pointer" wire:click="completed">
+            {{-- <div class="flex items-center cursor-pointer" wire:click="completed">
                 @if ($current->completed)
                     <i class="fas fa-toggle-on text-2xl text-blue-600"></i>
                 @else 
                     <i class="fas fa-toggle-off text-2xl text-gray-600"></i>
                 @endif
                 <p class="text-sm text-bold text-gray-500 ml-2">Marcar esta unidad como culminada</p>
-            </div>
+            </div> --}}
 
             @if ($current->resource)
             <div class="flex items-center text-gray-600 cursor-pointer" wire:click="download">
@@ -37,11 +37,11 @@
                 <div class="card-body flex text-gray-500 font-bold">
                     
                     @if ($this->previous)
-                        <a wire:click="changeLesson({{$this->previous}})" class="cursor-pointer">Tema Anterior</a>
+                        <a wire:click="changeLesson({{$this->previous}})" class="cursor-pointer">Video Anterior</a>
                     @endif
 
                     @if ($this->next)
-                        <a wire:click="changeLesson({{$this->next}})" class="ml-auto cursor-pointer">Tema Siguiente</a>
+                        <a wire:click="changeLesson({{$this->next}})" class="ml-auto cursor-pointer">Video Siguiente</a>
                     @endif
 
                 </div>
@@ -63,13 +63,13 @@
                     </div>
                 </div>
 
-                <p class="text-gray-600 text-sm mt-2">{{$this->advance . '%'}} Completado</p>
+                {{-- <p class="text-gray-600 text-sm mt-2">{{$this->advance . '%'}} Completado</p> --}}
 
-                <div class="relative pt-1">
+                {{-- <div class="relative pt-1">
                     <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200 ">
                         <div style="width:{{$this->advance . '%'}}" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500 transition-all duration-500"></div>
                     </div>
-                </div>
+                </div> --}}
 
                 <ul>
                     @foreach ($course->sections as $section)
@@ -106,3 +106,6 @@
         </div>
     </div>
 </div>
+
+<link href="https://chatcompose.azureedge.net/static/all/global/export/css/main.5b1bd1fd.css" rel="stylesheet">    
+<script async type="text/javascript" src="https://chatcompose.azureedge.net/static/all/global/export/js/main.a7059cb5.js?user=Edd-Arrendador&lang=ES" user="Edd-Arrendador" lang="ES"></script>  

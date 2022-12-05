@@ -1,6 +1,6 @@
 <section>
 
-    <h1 class="text-2xl font-bold"> Audiencia del curso</h1>
+    <h1 class="text-2xl font-bold"> Audiencia de la propiedad</h1>
     <hr class="mt-2 mb-6">
 
 
@@ -41,7 +41,7 @@
     <article class="card">
 <div class="card-body bg-gray-100">
     <form wire:submit.prevent="store"> 
-        <input wire:model="name" class="form-input w-full" placeholder="Agregar la audiencia del curso">
+        <input wire:model="name" class="form-input w-full" placeholder="Agregar la audiencia de la propiedad">
         @error('name')
             <span class="text-xs text-red-500">{{$message}}</span>
         @enderror

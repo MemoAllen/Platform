@@ -1,6 +1,6 @@
 <div>
 
-    <h1 class="text-2xl  font-bold">Lecciones del curso</h1>
+    <h1 class="text-2xl  font-bold">Videos de la propiedad</h1>
 
 
     <hr class="mt-2 mb-6 ">
@@ -21,7 +21,7 @@
 
                 @else
                 <header class="flex justify-between item-center">
-                    <h1 x-on:click="open=!open" class="cursor-pointer"><strong>Sección:</strong> {{ $item->name }}</h1>
+                    <h1 x-on:click="open=!open" class="cursor-pointer"><strong>Video:</strong> {{ $item->name }}</h1>
 
                     <div>
                         <i class="fas fa-edit cursor-pointer text-blue-500" wire:click="edit({{ $item }})"></i>

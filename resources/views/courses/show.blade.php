@@ -8,9 +8,9 @@
             <div class="text-white">
                 <h1 class="text-4xl">{{$course->title}}</h1>
                 <h2 class="text-xl mb-3">{{$course->subtitle}}</h2>
-                <p class="mb-2"><i class="fas fa-chart-line"></i> Nivel: {{$course->level->name}}</p>
-                <p class="mb-2"><i class=""></i> Categoria: {{$course->category->name}}</p>
-                <p class="mb-2"><i class="fas fa-users"></i> Matriculados: {{$course->students_count}}</p>
+                <p class="mb-2"><i class="fas fa-chart-line"></i> N. Adquisitivo: {{$course->level->name}}</p>
+                <p class="mb-2"><i class="fas fa-bookmark"></i> Categoria: {{$course->category->name}}</p>
+                <p class="mb-2"><i class="fas fa-users"></i> Usuarios que rentaron: {{$course->students_count}}</p>
                 <p class="mb-2"><i class="fas fa-star"></i> Calificación: {{$course->rating}}</p>
             </div>
         </div>
@@ -20,7 +20,7 @@
         <div class="order-2 lg:col-span-2 lg:order-1">
             <section class="card mb-12">
                 <div class="card-body">
-                    <h1 class="font-bold text-2xl mb-2 text-green-700">Lo que aprenderás</h1>
+                    <h1 class="font-bold text-2xl mb-2 text-green-700">Ventajas de la propiedad</h1>
                 
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
                         @foreach ($course->goals as $goal)
@@ -33,7 +33,7 @@
 
 
             <section class="mb-12">
-                <h1 class="font-bold text-3xl mb-2">Temario</h1>
+                <h1 class="font-bold text-3xl mb-2">Videos de la propiedad</h1>
                 @foreach ($course->sections as $section)
                     <article class="mb-4 shadow" 
                         @if ($loop->first)
@@ -88,20 +88,20 @@
                     <div class="flex items-center">
                         <img class="h-12 w-12 object-cover rounded-full shadow-lg" src="{{$course->teacher->profile_photo_url}}" alt="{{$course->teacher->name}}">
                         <div class="ml-4">
-                            <h1 class="font-bold text-gray-500 text-lg">Prof: {{$course->teacher->name}}</h1>
+                            <h1 class="font-bold text-gray-500 text-lg">Arrendatario: {{$course->teacher->name}}</h1>
                             <a class="text-blue-400 text-sm font-bold" href="">{{'@' . Str::slug($course->teacher->name, '')}}</a>
                         </div>
                     </div>
 
                     @can('enrolled', $course)
 
-                    <a class="btn btn-danger btn-block mt-4" href="{{route('courses.status', $course)}}">Continuar con el curso</a>
+                    <a class="btn btn-danger btn-block mt-4" href="{{route('courses.status', $course)}}">Continuar con la compra de la vivienda</a>
                         
                     @else
                         
                     <form action="{{route('courses.enrolled', $course)}}" method="POST">
                         @csrf
-                        <button class="btn btn-danger btn-block mt-4" type="submit">Llevar este curso</button>
+                        <button class="btn btn-danger btn-block mt-4" type="submit">Ver esta propiedad</button>
                     </form>
 
                     @endcan

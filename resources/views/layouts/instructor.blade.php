@@ -30,16 +30,16 @@
             <div class="container py-8 grid grid-cols-5">
                 <aside>
         
-                    <h1 class="font-bold text-lg mb-4">Edición del curso</h1>
+                    <h1 class="font-bold text-lg mb-4">Edición de la propiedad</h1>
                     <ul class="text-sm  text-gray-600" mb-4>
                         <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.edit', $course) border-indigo-400 @else border-transparent @endif pl-2">
-                            <a href="{{route('instructor.courses.edit', $course)}}">Información del curso</a>
+                            <a href="{{route('instructor.courses.edit', $course)}}">Información de la propiedad</a>
                         </li>
                         <li class="leading-7 mb-1 border-l-4  @routeIs('instructor.courses.curriculum', $course) border-indigo-400 @else border-transparent @endif pl-2">
-                            <a href="{{route('instructor.courses.curriculum', $course)}}">Lecciones del curso</a>
+                            <a href="{{route('instructor.courses.curriculum', $course)}}">Videos de la propiedad</a>
                         </li>
                         <li class="leading-7 mb-1 border-l-4 border-transparent @routeIs('instructor.courses.goals', $course) border-indigo-400 @else border-transparent @endif pl-2">
-                            <a href="{{route('instructor.courses.goals', $course)}}">Metas del curso</a>
+                            <a href="{{route('instructor.courses.goals', $course)}}">Metas de la propiedad</a>
                         </li>
                         <li class="leading-7 mb-1 border-l-4 border-transparent @routeIs('instructor.courses.students', $course) border-indigo-400 @else border-transparent @endif pl-2">
                             <a href="{{route('instructor.courses.students', $course)}}">Estudiantes</a>
@@ -47,7 +47,7 @@
 
                         @if ($course->observation)
                             <li class="leading-7 mb-1 border-l-4 border-transparent @routeIs('instructor.courses.observation', $course) border-indigo-400 @else border-transparent @endif pl-2">
-                                <a href="{{route('instructor.courses.observation', $course)}}">Observaciones</a>
+                                <a href="{{route('instructor.courses.observation', $course)}}">Arrendatarios</a>
                             </li>
                         @endif
                     </ul>
@@ -61,10 +61,10 @@
                     </form>
                     @break
                     @case(2)
-                        Este Curso se encuentra en revisión
+                        Esta propiedad se encuentra en revisión
                         @break
                     @case(3)
-                        Este Curso se encuentra publicado
+                        Esta propiedad se encuentra publicado
                         @break
                     @default
 

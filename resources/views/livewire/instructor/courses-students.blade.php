@@ -7,7 +7,7 @@
 <x-table-responsive>
     <div class="px-6 py-4">
         <input  wire:model="search" class="form-input flex-1 w-full shadow-sm"
-            placeholder="Ingrese el nombre de un curso">
+            placeholder="Ingrese el nombre de una propiedad en especifico">
     </div>
     @if ($students->count())
 

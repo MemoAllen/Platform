@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Curso Onlyne EASY')
+@section('title', 'Adm RENTA')
 
 @section('content_header')
     <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.categories.create')}}">Crear nueva categoria</a>

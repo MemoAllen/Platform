@@ -1,5 +1,5 @@
 <div class="mb-4">
-    {!! Form::label('title', 'Titulo del curso') !!}
+    {!! Form::label('title', 'Titulo de la propiedad') !!}
     {!! Form::text('title', null, ['class' => 'form-input block w-full mt-1' . ($errors->has('title') ? ' border-red-600' : '')]) !!}
     @error('title')
         <strong class="text-xs text-red-600">{{ $message }}</strong>
@@ -7,14 +7,14 @@
 </div>
 
 <div class="mb-4">
-    {!! Form::label('slug', 'slug del curso') !!}
+    {!! Form::label('slug', 'Slug de la propiedad') !!}
     {!! Form::text('slug', null, ['readonly' => 'readonly', 'class' => 'form-input block w-full mt-1']) !!}
     @error('slug')
         <strong class="text-xs text-red-600">{{ $message }}</strong>
     @enderror
 </div>
 <div class="mb-4">
-    {!! Form::label('subtitle', 'subtitulo del curso') !!}
+    {!! Form::label('subtitle', 'Subtitulo de la propiedad') !!}
     {!! Form::text('subtitle', null, ['class' => 'form-input block w-full mt-1' . ($errors->has('subtitle') ? ' border-red-600' : '')]) !!}
     @error('subtitle')
         <strong class="text-xs text-red-600">{{ $message }}</strong>
@@ -22,7 +22,7 @@
 </div>
 
 <div class="mb-4">
-    {!! Form::label('description', 'Descripción del curso') !!}
+    {!! Form::label('description', 'Descripción de la propiedad') !!}
     {!! Form::textarea('description', null, ['class' => 'form-input block w-full mt-1' . ($errors->has('description') ? ' border-red-600' : '')]) !!}
     @error('description')
         <strong class="text-xs text-red-600">{{ $message }}</strong>
@@ -35,7 +35,7 @@
 
     </div>
     <div>
-        {!! Form::label('level_id', 'Niveles:') !!}
+        {!! Form::label('level_id', 'Nivel adquisitivo:') !!}
         {!! Form::select('level_id', $levels, null, ['class' => 'form-input block w-full mt-1']) !!}
 
     </div>
@@ -47,7 +47,7 @@
 
 </div>
 
-<h1 class="text-2xl font-bold mt-8 mb-2">Imagen del curso</h1>
+<h1 class="text-2xl font-bold mt-8 mb-2">Imagen de la propiedad</h1>
 
 <div class="grid grid-cols-2 gap-4">
     <figure>
@@ -56,7 +56,7 @@
                 alt="">
         @else
             <img id="picture" class="w-full h-64 object-cover object-center"
-                src="https://images.pexels.com/photos/5905749/pexels-photo-5905749.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                src="https://i.pinimg.com/originals/e8/aa/a2/e8aaa218f1a475e95ca09ac8def2e83e.jpg"
                 alt="">
 
         @endisset

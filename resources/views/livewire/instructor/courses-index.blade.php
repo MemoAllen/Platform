@@ -2,8 +2,8 @@
     <x-table-responsive>
         <div class="px-6 py-4 flex">
             <input wire:keydown="limpiar_page" wire:model="search" class="form-input flex-1 shadow-sm"
-                placeholder="Ingrese el nombre de un curso">
-            <a class="btn btn-danger ml-2" href="{{ route('instructor.courses.create') }}">Crear nuevo curso</a>
+                placeholder="Ingrese el nombre de una propiedad en especifico">
+            <a class="btn btn-danger ml-2" href="{{ route('instructor.courses.create') }}">Crear nueva renta de propiedad</a>
         </div>
         @if ($courses->count())
 
@@ -16,7 +16,7 @@
                         </th>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Matriculados
+                            Veces arrentada
                         </th>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -24,10 +24,10 @@
                         </th>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Estatus de Curso
+                            Estatus de la propiedad
                         </th>
                         <th scope="col" class="relative px-6 py-3">
-                            <span class="sr-only">Edit</span>
+                            <span class="sr-only">Editar</span>
                         </th>
                     </tr>
                 </thead>
@@ -42,7 +42,7 @@
                                                 src="{{ Storage::url($course->image->url) }}" alt="">
                                         @else
                                             <img class="h-10 w-10 rounded-full object-cover object-center"
-                                                src="https://images.pexels.com/photos/5905749/pexels-photo-5905749.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                src="https://i.pinimg.com/originals/e8/aa/a2/e8aaa218f1a475e95ca09ac8def2e83e.jpg"
                                                 alt="">
                                         @endisset
                                     </div>
@@ -59,7 +59,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="text-sm text-gray-900">{{ $course->students->count() }}</div>
-                                <div class="text-sm text-gray-500">Alumnos matriculados</div>
+                                <div class="text-sm text-gray-500">Arrendatarios</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="text-sm text-gray-900 flex items-center">
@@ -87,7 +87,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="text-sm text-gray-500">Valoración curso</div>
+                                <div class="text-sm text-gray-500">Valoración de los usuarios</div>
                             </td>
 
                             <td class="px-6 py-4 whitespace-nowrap">

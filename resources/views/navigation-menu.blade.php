@@ -1,13 +1,13 @@
 @php
     $nav_links = [
         [
-            'name' => 'Home',
+            'name' => 'Inicio',
             'route' => route('home'),
             'active' => request()->routeIs('home')
         ],
         
         [
-            'name' => 'Cursos',
+            'name' => 'Propiedades',
             'route' => route('courses.index'),
             'active' => request()->routeIs('courses.*')
         ],
@@ -16,7 +16,7 @@
 
 
 
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 shadow">
+<nav x-data="{ open: false }" class="bg-green-200 border-gray-100 shadow top-0">
 
     <!-- Primary Navigation Menu -->
     <div class="container">
@@ -129,7 +129,7 @@
                                 @can('Leer cursos')
 
                                 <x-jet-dropdown-link href="{{ route('instructor.courses.index') }}">
-                                    Instructor
+                                    Arrendador
                                 </x-jet-dropdown-link>
 
                                 @endcan
@@ -164,8 +164,8 @@
                         </x-jet-dropdown>
 
                     @else
-                             <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                             <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Iniciar sesion</a>
+                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Registrarse</a>
                     @endauth
                     
                 </div>

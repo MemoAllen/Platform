@@ -50,7 +50,7 @@
                     </form>
                 @else
                     <header>
-                        <h1 class="cursor-pointer" x-on:click="open=!open"><i class="far fa-play-circle text-blue-500 mr-1"></i> Lección: {{ $item->name }}</h1>
+                        <h1 class="cursor-pointer" x-on:click="open=!open"><i class="far fa-play-circle text-blue-500 mr-1"></i> Vídeo: {{ $item->name }}</h1>
                     </header>
 
                     <div x-show="open">
@@ -86,11 +86,11 @@
     <div class="mt-4" x-data="{open:false}">
         <a x-show="!open" x-on:click="open =true" class="flex items-center cursor-pointer">
             <i class="far fa-plus-square text-2xl text-red-500 mr-2"></i>
-            Agregar nueva lección
+            Agregar nuevo vídeo
         </a>
         <article class="card" x-show="open">
             <div class="card-body">
-                <h1 class="text-xl font-bold mb-4">Agregar nueva lección</h1>
+                <h1 class="text-xl font-bold mb-4">Agregar nuevo vídeo</h1>
 
                 <div class="mb-4">
                     <div class="flex item-center">

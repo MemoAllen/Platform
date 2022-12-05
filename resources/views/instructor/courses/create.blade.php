@@ -2,7 +2,7 @@
     <div class="container py-8 ">
         <div class="card">
             <div class="card-body">
-                <h1 class="text-2xl font-bold">Crear nuevo curso</h1>
+                <h1 class="text-2xl font-bold">Crear nueva propiedad</h1>
                 <hr class="mt-2 mb-6">
 
                 {!! Form::open(['route'=>'instructor.courses.store', 'files' => true, 'autocomplete'=>'off']) !!}
@@ -13,7 +13,7 @@
 
                @include('instructor.courses.partials.form')
                 <div class="flex justify-end">
-                    {!! Form::submit('Crear nuevo curso', ['class'=> 'btn btn-primary cursor-pointer']) !!}
+                    {!! Form::submit('Crear nueva propiedad', ['class'=> 'btn btn-primary cursor-pointer']) !!}
                 </div>
                 {!! Form::close() !!}
             </div>
